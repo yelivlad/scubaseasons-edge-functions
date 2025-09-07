@@ -1,6 +1,7 @@
 // Setup type definitions for built-in Supabase Runtime APIs
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from 'jsr:@supabase/supabase-js@2'
+import { json } from "../../_shared/utils";
 
 export const handler = async (req: Request) => {
   try {
@@ -10,21 +11,15 @@ export const handler = async (req: Request) => {
       { global: { headers: { Authorization: req.headers.get('Authorization')! } } }
     )
 
-    const { data, error } = await supabase.from('notifications').select('*')
+    const { data, error } = await supabase.from('notifications').select('*').limit(2)
 
     if (error) {
       throw error
     }
 
-    return new Response(JSON.stringify({ data, myMsg: "test1" }), {
-      headers: { 'Content-Type': 'application/json' },
-      status: 200,
-    })
+    return json({ data, myMsg: "test1" })
   } catch (err) {
-    return new Response(JSON.stringify({ message: err?.message ?? err }), {
-      headers: { 'Content-Type': 'application/json' },
-      status: 500 
-    })
+    return json({ message: err?.message ?? err }, 500)
   }
 }
 

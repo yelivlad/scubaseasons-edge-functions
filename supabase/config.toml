@@ -1,3 +1,2 @@
 [functions.ping]
 verify_jwt = false
-entrypoint = "./functions/ping/index.ts"
