@@ -16,7 +16,7 @@ export const handler = async (req: Request) => {
       throw error
     }
 
-    return new Response(JSON.stringify({ data }), {
+    return new Response(JSON.stringify({ data, myMsg: "test1" }), {
       headers: { 'Content-Type': 'application/json' },
       status: 200,
     })
