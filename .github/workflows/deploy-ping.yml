@@ -6,6 +6,7 @@ on:
     paths:
       - "supabase/functions/**"
       - "supabase/config.toml"
+      - "supabase/import_map.json"
   workflow_dispatch:
 
 permissions:
