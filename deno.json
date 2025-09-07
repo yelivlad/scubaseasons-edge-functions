@@ -9,5 +9,5 @@
   "compilerOptions": {
     "lib": ["deno.ns", "dom"]
   },
-  "nodeModulesDir": "auto" 
+  "nodeModulesDir": true 
 }
