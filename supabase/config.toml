@@ -1,3 +1,6 @@
-[functions.hello]
+# supabase/config.toml
+
+[functions.ping]
 verify_jwt = false
-entrypoint = "./functions/ping/index.ts"
+import_map = "./functions/ping/import_map.json"
+# entrypoint defaults to ./functions/ping/index.ts
