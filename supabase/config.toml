@@ -1,0 +1,3 @@
+[functions.hello]
+verify_jwt = false
+entrypoint = "./functions/ping/index.ts"
