@@ -1,5 +1,9 @@
 # supabase/config.toml
 
+[functions]
+[functions.import_map]
+imports = { "@shared/" = "./functions/_shared/" }
+
 [functions.ping]
 verify_jwt = false
 # entrypoint defaults to ./functions/ping/index.ts
