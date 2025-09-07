@@ -23,7 +23,7 @@ export const handler = async (req: Request) => {
       dbStatus = "ok";
     }
 
-    return json({ ok: true, data, dbStatus, myMsg: "test1" });
+    return json({ ok: true, data, dbStatus, myMsg: "test2" });
   } catch (err: any) {
     return json({ ok: false, message: err?.message ?? String(err) }, 500);
   }
