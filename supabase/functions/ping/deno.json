@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "@shared/": "../_shared/"
-  },
-  "compilerOptions": {
-    "lib": ["deno.ns", "dom"]
-  }
-}
