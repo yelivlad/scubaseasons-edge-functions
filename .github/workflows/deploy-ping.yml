@@ -22,6 +22,7 @@ jobs:
       - run: deno task test
       - run: deno task coverage
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     env:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}

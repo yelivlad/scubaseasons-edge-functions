@@ -4,6 +4,7 @@ Deno.test("ping returns ok", async () => {
   const req = new Request("http://localhost/ping?name=Vlad");
   const res = await handler(req);
 
+  throw new Error("test failed to check pipeline.");
   if (res.status !== 200) throw new Error(`expected 200, got ${res.status}`);
 
   const body = await res.json();
