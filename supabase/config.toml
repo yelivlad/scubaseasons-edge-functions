@@ -1,6 +1,10 @@
+# supabase/config.toml
+
 [functions]
-import_map = "import_map.json"
+# Inline import map that the bundler will use
+[functions.import_map]
+imports = { "@shared/" = "./functions/_shared/" }
 
 [functions.ping]
 verify_jwt = false
-# entrypoint uses default: ./functions/ping/index.ts
+# entrypoint defaults to ./functions/ping/index.ts
