@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "test": "deno test -A --fail-fast",
+    "coverage": "deno test -A --coverage=coverage && deno coverage coverage --lcov > coverage.lcov"
+  },
+  "compilerOptions": {
+    "lib": ["deno.ns", "dom"]
+  }
+}

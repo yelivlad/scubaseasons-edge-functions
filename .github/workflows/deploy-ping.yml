@@ -12,6 +12,15 @@ permissions:
   contents: read
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v1.x
+      - run: deno task test
+      - run: deno task coverage
   deploy:
     runs-on: ubuntu-latest
     env:
