@@ -1,7 +1,7 @@
 // Setup type definitions for built-in Supabase Runtime APIs
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from 'jsr:@supabase/supabase-js@2'
-import { json } from "../_shared/utils";
+import { json } from "@shared/utils.ts";
 
 export const handler = async (req: Request) => {
   try {
